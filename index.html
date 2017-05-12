@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>D3 Intro</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <script src="./scripts/d3.min.js"></script>
+    <script src="./scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="./scripts/live.js"></script>
+    <script type="text/javascript" src="./scripts/flow.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
+  </head>
+  <body>
+    <div class="flow">
+      <a href="./flow.html">FlowState Project</a>
+    </div>
+    <!-- <svg>
+      <rect width="100" height="100"></rect>
+    </svg>
+
+    <svg>
+      <rect width="250" height="250"></rect>
+    </svg>
+
+    <svg width="250" height="250">
+      <rect width="250" height="250"></rect>
+    </svg>
+
+    <svg width="250" height="250">
+      <rect x="50" y="50" width="20" height="20"></rect>
+    </svg>
+
+    <svg width="250" height="250">
+      <rect x="100" y="150" width="20" height="20"></rect>
+    </svg> -->
+
+    <!-- <svg width="250" height="250">
+      <rect x="0"   y="0" width="100" height="100" fill="red"></rect>
+      <rect x="120" y="0" width="100" height="100" fill="orange"></rect>
+      <rect x="0" y="120" width="100" height="100" fill="blue"></rect>
+    </svg>
+
+    <svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <line x1="40" x2="120" y1="20" y2="20" stroke="black" stroke-width="20" stroke-linecap="butt"/>
+    <line x1="40" x2="120" y1="60" y2="60" stroke="black" stroke-width="20" stroke-linecap="square"/>
+    <line x1="40" x2="120" y1="100" y2="100" stroke="black" stroke-width="20" stroke-linecap="round"/>
+  </svg>
+
+  <svg width="160" height="280" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <polyline points="40 60 80 20 120 60" stroke="black" stroke-width="20"
+      stroke-linecap="butt" fill="none" stroke-linejoin="miter"/>-->
+
+  <polyline points="40 140 80 100 120 140" stroke="black" stroke-width="20"
+      stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+
+  <!-- <polyline points="40 220 80 180 120 220" stroke="black" stroke-width="20"
+      stroke-linecap="square" fill="none" stroke-linejoin="bevel"/>
+  </svg>
+
+  <svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
+      stroke-linecap="round" stroke-dasharray="5,10,5" fill="none"/>
+    <path d="M 10 75 L 190 75" stroke="red"
+      stroke-linecap="round" stroke-width="1" stroke-dasharray="5,5" fill="none"/>
+  </svg> -->
+
+    <!-- <svg width="250" height="250">
+      <rect x="0"  y="0"  width="200" height="200" fill="rgb(255, 0, 0)"></rect>
+      <rect x="50" y="50" width="200" height="200" fill="rgba(0, 255, 0, 0.5)"></rect>
+    </svg> -->
+
+    <!-- <svg width="250" height="250">
+      <rect x="50" y="50" width="150" height="150"
+            fill="none" stroke="brown" ></rect>
+    </svg>
+    <svg width="250" height="250">
+      <rect x="50" y="50" width="150" height="150"
+            fill="powderblue" stroke="yellow" stroke-width="20"></rect>
+    </svg>
+    <svg width="250" height="250">
+      <circle r="250"></circle>
+    </svg>
+    <svg width="100" height="100">
+      <circle r="100"></circle>
+    </svg>
+    <svg width="250" height="250">
+      <circle cx="100" cy="100" r="50" fill="purple"></circle>
+    </svg>
+    <svg width="350" height="350">
+      <circle cx="30" cy="0" r="70" fill="green"></circle>
+    </svg> -->
+
+    <svg width="250" height="250">
+      <circle cx="100" cy="100" r="50" fill="purple"></circle>
+    </svg>
+    <svg width="150" height="150">
+      <circle cx="100" cy="100" r="50" fill="pink"
+              stroke="blue" stroke-width="10"></circle>
+    </svg>
+    <svg width="250" height="250">
+      <line x1="150" y1="20" x2="200" y2="150" stroke="black"  stroke-width="20"></line>
+    </svg>
+    <svg width="250" height="250" style="background-color: orange">
+      <line x1="50"  y1="50"  x2="100" y2="150" stroke="black" stroke-width="10" stroke-linecap="round"></line>
+      <line x1="100" y1="150" x2="150" y2="100" stroke="black" stroke-width="10" stroke-linecap="round"></line>
+      <line x1="150" y1="100" x2="200" y2="150" stroke="black" stroke-width="10" stroke-linecap="round"></line>
+    </svg>
+    <svg width="250" height="250" style="background-color: black">
+      <circle cx="50" cy="50" r="25" fill="yellow" stroke="gray" stroke-width="3"></circle>
+      <circle cx="100" cy="150" r="25" fill="yellow" stroke="gray" stroke-width="3"></circle>
+      <circle cx="150" cy="100" r="25" fill="yellow" stroke="gray" stroke-width="3"></circle>
+      <line x1="50"  y1="50"  x2="100" y2="150" stroke="white" stroke-width="10" stroke-linecap="round"></line>
+      <line x1="100" y1="150" x2="150" y2="100" stroke="white" stroke-width="10" stroke-linecap="round"></line>
+      <line x1="150" y1="100" x2="200" y2="150" stroke="white" stroke-width="10" stroke-linecap="round"></line>
+    </svg>
+    <!--
+    using SVG paths
+    Domain specific language for paths
+    M = Move to
+    L = Line to
+    -->
+    <svg width="350" height="350" style="background-color: blue">
+      <path d="M50 50 L200 150" stroke="black" stroke-width="20"></path>
+    </svg>
+    <svg width="350" height="350" style="background-color: aqua">
+      <path d="M30 90 L330 25" stroke="powderblue" stroke-width="15"></path>
+    </svg>
+    <!--
+    drawing several lines with a path
+    Fill does apply to paths
+    It is turned off with fill="none"
+    -->
+    <svg width="250" height="250">
+      <path d="M50 50 L100 150 L150 100 L200 150"
+            fill="none" stroke="black" stroke-width="10"></path>
+    </svg>
+    <svg width="250" height="250" style="background-color: lightsalmon">
+      <path d="M50 50 L200 50 L200 50 50 200 L50 200 200 200"
+            fill="none" stroke="black" stroke-width="10" stroke-linecap="round"></path>
+    </svg>
+    <svg width="250" height="250" style="background-color: lightsalmon">
+      <path d="M50 50 L200 50 L200 50 50 200 L50 200 200 200"
+            fill="red" stroke="black" stroke-width="10" stroke-linecap="round"></path>
+    </svg>
+    <svg width="250" height="250" style="background-color: lightsalmon">
+      <path d="M50 50 L200 50 L200 50 50 200 L50 200 200 200Z"
+            fill="red" stroke="black" stroke-width="10" stroke-linecap="round"></path>
+    </svg>
+    <svg width="350" height="350">
+      <path d="M50 50 L100 150 L150 150 L115 50"
+            fill="red" stroke="black" stroke-width="10"></path>
+    </svg>
+    <svg width="350" height="350">
+      <path d="M50 50 L100 150 L150 150 L115 50Z"
+            fill="red" stroke="black" stroke-width="10"></path>
+    </svg>
+    <svg width="250" height="250">
+      <rect x="0"  y="0"   width="50"  height="200" fill="lightblue"/>
+      <rect x="50" y="200" width="200" height="50"  fill="lightgreen"/>
+      <circle cx="0"   cy="0"   r="25"/>
+      <circle cx="100" cy="100" r="25"/>
+      <circle cx="130" cy="120" r="25"/>
+      <circle cx="80"  cy="180" r="25"/>
+      <circle cx="180" cy="80"  r="25"/>
+      <circle cx="180" cy="40"  r="25"/>
+    </svg>
+    <svg width="250" height="250">
+      <rect x="0"  y="0"   width="50"  height="200" fill="black"/>
+      <rect x="50" y="200" width="200" height="50"  fill="red"/>
+      <g transform="translate(0, 0)">
+        <circle cx="0"   cy="0"   r="10"/>
+        <circle cx="100" cy="100" r="10"/>
+        <circle cx="130" cy="120" r="10"/>
+        <circle cx="80"  cy="180" r="10"/>
+        <circle cx="180" cy="80"  r="10"/>
+        <circle cx="180" cy="40"  r="10"/>
+      </g>
+    </svg>
+    <svg width="250" height="250">
+
+      <rect x="0"  y="0"   width="50"  height="200" fill="gray"/>
+      <rect x="50" y="200" width="200" height="50"  fill="gray"/>
+
+      <g transform="translate(50, 0)">
+        <rect x="5"   y="0"   width="40" height="200"/>
+        <rect x="55"  y="50"  width="40" height="150"/>
+        <rect x="105" y="100" width="40" height="100"/>
+        <rect x="155" y="150" width="40" height="50"/>
+      </g>
+
+    </svg>
+    <svg width="250" height="250">
+
+      <rect x="0"  y="0"   width="50"  height="200" fill="gray"/>
+      <rect x="50" y="200" width="200" height="50"  fill="gray"/>
+
+      <g transform="translate(50, 0)">
+        <path d="M0 200 L50 50 L100 150 L150 100 L200 150"
+              fill="none" stroke="black" stroke-width="10"></path>
+      </g>
+
+    </svg>
+    <svg width="250" height="250">
+      <text class="all-text" x="50" y="50" fill="blue">Hello SVG Text!</text>
+    </svg>
+    <svg width="300" height="250" class="one">
+      <text class="a" x="120" y="120">SVG Text A</text>
+      <text class="b" x="120" y="170">SVG Text B</text>
+      <text class="j" x="200"  y="250">Josh</text>
+    </svg>
+    <svg width="300" height="250">
+      <text class="my-text" x="0" y="100">A cool font.</text>
+    </svg>
+
+  </body>
+  </html>

@@ -1,0 +1,38 @@
+.all-text {
+  font-size: 3em;
+  font-family: 'futura';
+  fill: red;
+}
+
+.one {
+  background-color: lightgray;
+}
+
+.a {
+  font-size: 1em;
+  fill: green;
+}
+
+.b {
+  font-size: 2em;
+  fill: blue;
+}
+
+.j {
+  font-size: 20em;
+  fill: lightblue;
+  stroke: black;
+  stroke-width: 10px;
+}
+
+.my-text {
+       font-size: 3em;
+       font-family: 'Poiret One', cursive;
+     }
+.flow {
+  font-size: 6em;
+}
+
+.sandbox {
+  font-size: 6em;
+}

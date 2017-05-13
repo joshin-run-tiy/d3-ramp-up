@@ -7,18 +7,41 @@
 <script type="text/javascript" src="../jquery-3.2.1.min.js"></script>
 </head>
   <body>
-    <script>
-    let csvString = "sepal length,sepal width,petal length,petal width,class\n\
-    5.1,3.5,1.4,0.2,Iris-setosa\n\
-    4.9,3.0,1.4,0.2,Iris-setosa\n\
-    4.7,3.2,1.3,0.2,Iris-setosa\n\
-    4.6,3.1,1.5,0.2,Iris-setosa";
+<script>
+function parseCSV(csvString) {
+  let lines = csvString.split("\n")
+  let columnNames = lines[0].split(",");
+  let rows = lines.slice(1);
+  let data = rows.map(function(row) {
+    let entries = row.split(",");
+    let rowObject = {};
+    columnNames.forEach(function(columnName, i) {
+      rowObject[columnName] = entries[i];
+    });
+    return rowObject;
+  });
+  return data;
+}
 
-    let data = d3.csvParse(csvString)
+let irisCSVString = "sepal length,sepal width,petal length,petal width,class\n\
+5.1,3.5,1.4,0.2,Iris-setosa\n\
+4.9,3.0,1.4,0.2,Iris-setosa\n\
+4.7,3.2,1.3,0.2,Iris-setosa\n\
+4.6,3.1,1.5,0.2,Iris-setosa";
+// console.log('CSV string', irisCSVString);
 
-    console.log(csvString);
-    console.log(data);
+// let irisData = d3.csvParse(irisCSVString)
+// console.log('Parsed irisData, d3.csvParse:', irisData);
 
-    </script>
+let parsedCSV = d3.csvParse(irisCSVString, function(rowObject){
+  rowObject["petal length"] = +rowObject["petal length"];
+  rowObject["petal width"] = +rowObject["petal width"];
+  rowObject["sepal length"] = +rowObject["sepal length"];
+  rowObject["sepal width"] = +rowObject["sepal width"];
+  return rowObject;
+});
+console.log('Parsed irisCSVString using function:', parsedCSV);
+
+</script>
   </body>
 </html>
